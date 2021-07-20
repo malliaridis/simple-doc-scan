@@ -11,7 +11,7 @@
         android:label="start_fragment"
         tools:layout="@layout/start_fragment">
         <action
-            android:id="@+id/action_startFragment_to_scanFragment"
+            android:id="@+id/action_start_fragment_to_scan_fragment"
             app:destination="@id/scan_fragment" />
     </fragment>
 
@@ -21,7 +21,7 @@
         android:label="scan_fragment"
         tools:layout="@layout/scan_fragment">
         <action
-            android:id="@+id/action_scanFragment_to_completeFragment"
+            android:id="@+id/action_scan_fragment_to_complete_fragment"
             app:destination="@id/complete_fragment" />
     </fragment>
 
