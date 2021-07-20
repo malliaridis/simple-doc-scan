@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">SimpleDocScan</string>
+    <string name="invalid_email_address">Invalid email address</string>
+    <string name="welcome">Welcome</string>
+    <string name="where_to_send">Who do you want to send the file to?</string>
+    <string name="email_hint">email@example.com</string>
+    <string name="continue_word">Continue</string>
 </resources>
