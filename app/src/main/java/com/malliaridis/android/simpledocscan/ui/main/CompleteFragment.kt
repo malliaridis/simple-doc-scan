@@ -1,4 +1,4 @@
-package com.example.simpledocscan.ui.main
+package com.malliaridis.android.simpledocscan.ui.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.example.simpledocscan.R
-import com.example.simpledocscan.databinding.CompleteFragmentBinding
+import com.malliaridis.android.simpledocscan.R
+import com.malliaridis.android.simpledocscan.databinding.CompleteFragmentBinding
 
 class CompleteFragment : Fragment() {
 

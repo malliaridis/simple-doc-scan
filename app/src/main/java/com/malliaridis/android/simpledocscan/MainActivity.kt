@@ -1,10 +1,10 @@
-package com.example.simpledocscan
+package com.malliaridis.android.simpledocscan
 
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.example.simpledocscan.databinding.MainActivityBinding
-import com.example.simpledocscan.ui.main.MainViewModel
+import com.malliaridis.android.simpledocscan.databinding.MainActivityBinding
+import com.malliaridis.android.simpledocscan.ui.main.MainViewModel
 
 class MainActivity : AppCompatActivity() {
 

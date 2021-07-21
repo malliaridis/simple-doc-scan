@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/start_fragment"
-        android:name="com.example.simpledocscan.ui.main.StartFragment"
+        android:name="com.malliaridis.android.simpledocscan.ui.main.StartFragment"
         android:label="start_fragment"
         tools:layout="@layout/start_fragment">
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/doc_scan_fragment"
-        android:name="com.example.simpledocscan.ui.main.DocScanFragment"
+        android:name="com.malliaridis.android.simpledocscan.ui.main.DocScanFragment"
         android:label="doc_scan_fragment"
         tools:layout="@layout/doc_scan_fragment">
         <action
@@ -27,7 +27,7 @@
 
     <fragment
         android:id="@+id/send_fragment"
-        android:name="com.example.simpledocscan.ui.main.SendFragment"
+        android:name="com.malliaridis.android.simpledocscan.ui.main.SendFragment"
         android:label="send_fragment"
         tools:layout="@layout/send_fragment">
         <action
@@ -37,7 +37,7 @@
 
     <fragment
         android:id="@+id/complete_fragment"
-        android:name="com.example.simpledocscan.ui.main.CompleteFragment"
+        android:name="com.malliaridis.android.simpledocscan.ui.main.CompleteFragment"
         android:label="complete_fragment"
         tools:layout="@layout/complete_fragment">
         <action

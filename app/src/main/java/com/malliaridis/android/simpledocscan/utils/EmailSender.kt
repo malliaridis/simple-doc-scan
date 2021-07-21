@@ -1,4 +1,4 @@
-package com.example.simpledocscan.utils
+package com.malliaridis.android.simpledocscan.utils
 
 import android.content.Intent
 import android.net.Uri

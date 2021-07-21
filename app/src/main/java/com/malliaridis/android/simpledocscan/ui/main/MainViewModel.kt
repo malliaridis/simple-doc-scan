@@ -1,4 +1,4 @@
-package com.example.simpledocscan.ui.main
+package com.malliaridis.android.simpledocscan.ui.main
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
