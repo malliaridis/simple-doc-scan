@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">SimpleDocScan</string>
+    <string name="invalid_email_address">Invalid email address</string>
+    <string name="welcome">Welcome!</string>
+    <string name="where_to_send">Who do you want to send the file to?</string>
+    <string name="email_hint">email@example.com</string>
+    <string name="continue_word">Continue</string>
+    <string name="missing_camera_permission">Missing camera permission</string>
+    <string name="detection_status_searching">Searching…</string>
+    <string name="detection_status_found">Document not found.</string>
+    <string name="send">Send</string>
+    <string name="error_wrong">Something went wrong. Please restart the process.</string>
+    <string name="hold_still">Hold still!</string>
+    <string name="restart">Restart</string>
+    <string name="completion_message">Hurrah!\nYou completed your process!</string>
+    <string name="close">Close</string>
 </resources>

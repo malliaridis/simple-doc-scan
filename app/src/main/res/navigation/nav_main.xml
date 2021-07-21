@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/start_fragment">
+
+    <fragment
+        android:id="@+id/start_fragment"
+        android:name="com.malliaridis.android.simpledocscan.ui.main.StartFragment"
+        android:label="start_fragment"
+        tools:layout="@layout/start_fragment">
+        <action
+            android:id="@+id/action_start_fragment_to_doc_scan_fragment"
+            app:destination="@id/doc_scan_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/doc_scan_fragment"
+        android:name="com.malliaridis.android.simpledocscan.ui.main.DocScanFragment"
+        android:label="doc_scan_fragment"
+        tools:layout="@layout/doc_scan_fragment">
+        <action
+            android:id="@+id/action_doc_scan_fragment_to_send_fragment"
+            app:destination="@id/send_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/send_fragment"
+        android:name="com.malliaridis.android.simpledocscan.ui.main.SendFragment"
+        android:label="send_fragment"
+        tools:layout="@layout/send_fragment">
+        <action
+            android:id="@+id/action_send_fragment_to_complete_fragment"
+            app:destination="@id/complete_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/complete_fragment"
+        android:name="com.malliaridis.android.simpledocscan.ui.main.CompleteFragment"
+        android:label="complete_fragment"
+        tools:layout="@layout/complete_fragment">
+        <action
+            android:id="@+id/action_complete_fragment_to_start_fragment"
+            app:destination="@id/start_fragment"
+            app:popUpTo="@id/start_fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

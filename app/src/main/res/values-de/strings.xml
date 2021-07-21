@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SimpleDocScan</string>
+    <string name="invalid_email_address">Ungültige Email-Adresse</string>
+    <string name="welcome">Willkommen!</string>
+    <string name="where_to_send">An wen möchtest du die Datei senden?</string>
+    <string name="email_hint">max@mustermann.de</string>
+    <string name="continue_word">Weiter</string>
+    <string name="missing_camera_permission">Fehlende Kamera-Berechtigungen</string>
+    <string name="detection_status_searching">Sucht…</string>
+    <string name="detection_status_found">Dokument nicht gefunden.</string>
+    <string name="send">Absenden</string>
+    <string name="error_wrong">Etwas ist schiefgelaufen. Bitte starte den Prozess neu.</string>
+    <string name="hold_still">Halte still!</string>
+    <string name="restart">Neustarten</string>
+    <string name="completion_message">Hurra!\nDu bist fertig!</string>
+    <string name="close">Schließen</string>
+</resources>
