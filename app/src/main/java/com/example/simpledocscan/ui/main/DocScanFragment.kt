@@ -34,8 +34,14 @@ import java.util.*
  */
 class DocScanFragment : Fragment(), ScanFragment.CameraCallbackProvider {
 
+    /**
+     * Quadrangle that holds the bounces of the document scanned. Is set once the picture is taken.
+     */
     private lateinit var quadrangle: Quadrangle
 
+    /**
+     * Variable that is true if the camera permissions are granted to the app.
+     */
     private var permissionGranted: Boolean = false
 
     /**
@@ -43,6 +49,9 @@ class DocScanFragment : Fragment(), ScanFragment.CameraCallbackProvider {
      */
     private lateinit var safeContext: Context
 
+    /**
+     * The [ScanFragment] that handles the document detection camera preview and picture snapshot.
+     */
     private val scanFragment = ScanFragment()
 
     /**

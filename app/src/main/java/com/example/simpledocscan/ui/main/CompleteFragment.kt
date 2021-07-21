@@ -23,11 +23,24 @@ import java.util.*
  */
 class CompleteFragment : Fragment() {
 
+    /**
+     * Global view-model used for storing and retrieving global variables.
+     */
     private val viewModel: MainViewModel by activityViewModels()
 
-    private lateinit var requestPermissionLauncher: ActivityResultLauncher<Intent>
+    /**
+     * Activity result launcher that handles activity responses of the email intent.
+     */
+    private lateinit var activityResultLauncher: ActivityResultLauncher<Intent>
 
+    /**
+     * Nullable view binding variable used to inflate layout into it.
+     */
     private var _binding: CompleteFragmentBinding? = null
+
+    /**
+     * Not-null view binding variable used to reference views from layout.
+     */
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -37,7 +50,7 @@ class CompleteFragment : Fragment() {
         _binding = CompleteFragmentBinding.inflate(inflater, container, false)
 
         // Register for intent completion results
-        requestPermissionLauncher = registerForActivityResult(
+        activityResultLauncher = registerForActivityResult(
             ActivityResultContracts.StartActivityForResult()
         ) { result ->
             if (result.resultCode == Activity.RESULT_OK) {
@@ -81,7 +94,7 @@ class CompleteFragment : Fragment() {
      * Starts the provided intent and continues to the completion fragment if successfully.
      */
     private fun startIntent(intent: Intent) {
-        requestPermissionLauncher.launch(intent)
+        activityResultLauncher.launch(intent)
     }
 
     override fun onResume() {
