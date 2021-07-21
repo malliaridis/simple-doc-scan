@@ -116,7 +116,7 @@ class StartFragment : Fragment() {
 /**
  * Value that represents the current progress of this fragment
  */
-private const val CURRENT_PROGRESS = 1
+private const val CURRENT_PROGRESS = 0
 
 /**
  * Key used for storing temporary email address in saved instance state.

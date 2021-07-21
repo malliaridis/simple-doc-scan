@@ -251,7 +251,7 @@ class DocScanFragment : Fragment(), ScanFragment.CameraCallbackProvider {
                 viewModel.setDocument(pngFile)
 
                 // Navigate to next step fragment
-                findNavController().navigate(R.id.action_doc_scan_fragment_to_complete_fragment)
+                findNavController().navigate(R.id.action_doc_scan_fragment_to_send_fragment)
             }
 
             override fun onPreviewFrame(bytes: ByteArray, width: Int, height: Int, format: Int) {}
@@ -262,4 +262,4 @@ class DocScanFragment : Fragment(), ScanFragment.CameraCallbackProvider {
 /**
  * Value that represents the current progress of this fragment
  */
-private const val CURRENT_PROGRESS = 2
+private const val CURRENT_PROGRESS = 1

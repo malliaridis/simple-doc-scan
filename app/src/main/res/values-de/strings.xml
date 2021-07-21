@@ -12,4 +12,7 @@
     <string name="send">Absenden</string>
     <string name="error_wrong">Etwas ist schiefgelaufen. Bitte starte den Prozess neu.</string>
     <string name="hold_still">Halte still!</string>
+    <string name="restart">Neustarten</string>
+    <string name="completion_message">Hurra!\nDu bist fertig!</string>
+    <string name="close">Schließen</string>
 </resources>

@@ -1,37 +1,21 @@
 package com.example.simpledocscan.ui.main
 
-import android.app.Activity
-import android.content.Intent
-import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.simpledocscan.R
 import com.example.simpledocscan.databinding.CompleteFragmentBinding
-import com.example.simpledocscan.utils.generateEmailIntent
-import java.util.*
 
-/**
- * This fragment represents the final step of the app, displaying and sending the scanned
- * document via email.
- */
 class CompleteFragment : Fragment() {
 
     /**
      * Global view-model used for storing and retrieving global variables.
      */
     private val viewModel: MainViewModel by activityViewModels()
-
-    /**
-     * Activity result launcher that handles activity responses of the email intent.
-     */
-    private lateinit var activityResultLauncher: ActivityResultLauncher<Intent>
 
     /**
      * Nullable view binding variable used to inflate layout into it.
@@ -49,52 +33,25 @@ class CompleteFragment : Fragment() {
     ): View {
         _binding = CompleteFragmentBinding.inflate(inflater, container, false)
 
-        // Register for intent completion results
-        activityResultLauncher = registerForActivityResult(
-            ActivityResultContracts.StartActivityForResult()
-        ) { result ->
-            if (result.resultCode == Activity.RESULT_OK) {
-                // TODO navigate to completion screen
-            }
+        // Set button actions
+        binding.btRestart.setOnClickListener {
+            resetProcess()
         }
 
-        // Observe scanned files and display to the user whenever they change
-        viewModel.documentLive.observe(viewLifecycleOwner) { file ->
-            val bitmap = BitmapFactory.decodeFile(file.absolutePath)
-            binding.ivResultImage.setImageBitmap(bitmap)
-        }
-
-        binding.btSend.setOnClickListener {
-            sendImage()
+        binding.btClose.setOnClickListener {
+            // Terminate app
+            activity?.finishAffinity()
         }
 
         return binding.root
     }
 
     /**
-     * Collects all information from the fragments via the [MainViewModel], creates and executes
-     * an email intent. In case any information is missing, a toast messages is displayed and
-     * the process is aborted.
+     * Resets view-model and return to start fragment
      */
-    private fun sendImage() {
-        val email = viewModel.emailAddressLive.value
-        val image = viewModel.documentLive.value
-        val subject = Calendar.getInstance().time.toString()
-
-        if (email == null || image == null) {
-            Toast.makeText(requireContext(), R.string.error_wrong, Toast.LENGTH_LONG).show()
-        } else {
-
-            val intent = generateEmailIntent(email, subject, image)
-            startIntent(intent)
-        }
-    }
-
-    /**
-     * Starts the provided intent and continues to the completion fragment if successfully.
-     */
-    private fun startIntent(intent: Intent) {
-        activityResultLauncher.launch(intent)
+    private fun resetProcess() {
+        viewModel.reset()
+        findNavController().navigate(R.id.action_complete_fragment_to_start_fragment)
     }
 
     override fun onResume() {

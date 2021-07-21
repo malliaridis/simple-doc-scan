@@ -11,4 +11,7 @@
     <string name="send">Send</string>
     <string name="error_wrong">Something went wrong. Please restart the process.</string>
     <string name="hold_still">Hold still!</string>
+    <string name="restart">Restart</string>
+    <string name="completion_message">Hurrah!\nYou completed your process!</string>
+    <string name="close">Close</string>
 </resources>

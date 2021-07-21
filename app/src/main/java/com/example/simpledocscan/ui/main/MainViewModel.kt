@@ -10,7 +10,7 @@ class MainViewModel : ViewModel() {
     /**
      * Mutable progress state. Represents the current progress.
      */
-    private val _progress = MutableLiveData<Int>().apply { value = 1 }
+    private val _progress = MutableLiveData<Int>().apply { value = 0 }
 
     /**
      * Live data that represents the current progress state. Can be used to subscribe for
@@ -47,11 +47,11 @@ class MainViewModel : ViewModel() {
      * Function to update the global progress state.
      *
      * @param progress Value that represents the current progress. Possible values are
-     * 1, 2 or 3. Other values are ignored.
+     * 0, 1, 2 or 3. Other values are ignored.
      */
     fun setProgress(progress: Int) {
         // Ignore invalid progress states
-        if (progress != 1 && progress != 2 && progress != 3) return
+        if (progress < 0 || progress > 3) return
 
         _progress.value = progress
     }
@@ -69,5 +69,15 @@ class MainViewModel : ViewModel() {
      */
     fun setDocument(document: File) {
         _document.value = document
+    }
+
+    /**
+     * Reset function that resets all values set.
+     */
+    fun reset() {
+        _progress.value = 0
+        _emailAddress.value = null
+        // resetting document not possible, so ignore
+        // _document.value = null
     }
 }
