@@ -2,12 +2,12 @@ package com.example.simpledocscan.ui.main
 
 import android.os.Bundle
 import android.util.Patterns
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import androidx.core.widget.doOnTextChanged
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.simpledocscan.R
@@ -46,9 +46,6 @@ class StartFragment : Fragment() {
     ): View {
         _binding = StartFragmentBinding.inflate(inflater, container, false)
 
-        // Set current progress
-        viewModel.setProgress(CURRENT_PROGRESS)
-
         // Disable button by default if input field is empty
         updateButtonState()
 
@@ -71,12 +68,19 @@ class StartFragment : Fragment() {
         return binding.root
     }
 
+    override fun onResume() {
+        super.onResume()
+
+        // Set current progress
+        viewModel.setProgress(CURRENT_PROGRESS)
+    }
+
     private fun validateAndContinue() {
         val email = binding.etEmailAddress.text.toString()
 
         if (isValidEmailAddress(email)) {
             viewModel.setEmailAddress(email)
-            findNavController().navigate(R.id.action_start_fragment_to_scan_fragment)
+            findNavController().navigate(R.id.action_start_fragment_to_doc_scan_fragment)
         } else {
             binding.etEmailAddress.error = getString(R.string.invalid_email_address)
         }

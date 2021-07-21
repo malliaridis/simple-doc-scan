@@ -1,9 +1,9 @@
 package com.example.simpledocscan.ui.main
 
-import androidx.core.graphics.BitmapCompat
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import java.io.File
 
 class MainViewModel : ViewModel() {
 
@@ -33,15 +33,15 @@ class MainViewModel : ViewModel() {
 
 
     /**
-     * Mutable document bitmap state. Represents the scanned document as bitmap.
+     * Mutable document file state. Represents the scanned document as file.
      */
-    private val _document = MutableLiveData<BitmapCompat>()
+    private val _document = MutableLiveData<File>()
 
     /**
      * Live data that represents the document scanned. Can be used to store the document
      * globally and retrieve it when necessary.
      */
-    val documentLive: LiveData<BitmapCompat> = _document
+    val documentLive: LiveData<File> = _document
 
     /**
      * Function to update the global progress state.
@@ -67,7 +67,7 @@ class MainViewModel : ViewModel() {
     /**
      * Function to store the scanned document.
      */
-    fun setDocument(document: BitmapCompat) {
+    fun setDocument(document: File) {
         _document.value = document
     }
 }

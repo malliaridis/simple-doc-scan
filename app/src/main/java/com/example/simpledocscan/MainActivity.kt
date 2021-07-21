@@ -1,8 +1,8 @@
 package com.example.simpledocscan
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import com.example.simpledocscan.databinding.MainActivityBinding
 import com.example.simpledocscan.ui.main.MainViewModel

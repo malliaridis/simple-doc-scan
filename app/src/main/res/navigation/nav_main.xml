@@ -11,17 +11,17 @@
         android:label="start_fragment"
         tools:layout="@layout/start_fragment">
         <action
-            android:id="@+id/action_start_fragment_to_scan_fragment"
-            app:destination="@id/scan_fragment" />
+            android:id="@+id/action_start_fragment_to_doc_scan_fragment"
+            app:destination="@id/doc_scan_fragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/scan_fragment"
-        android:name="com.example.simpledocscan.ui.main.ScanFragment"
-        android:label="scan_fragment"
-        tools:layout="@layout/scan_fragment">
+        android:id="@+id/doc_scan_fragment"
+        android:name="com.example.simpledocscan.ui.main.DocScanFragment"
+        android:label="doc_scan_fragment"
+        tools:layout="@layout/doc_scan_fragment">
         <action
-            android:id="@+id/action_scan_fragment_to_complete_fragment"
+            android:id="@+id/action_doc_scan_fragment_to_complete_fragment"
             app:destination="@id/complete_fragment" />
     </fragment>
 
