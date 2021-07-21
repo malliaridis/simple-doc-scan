@@ -36,7 +36,8 @@ This project has a couple of limitations or issues if you want to call it that w
 - Error handling when license is expired or not set is not properly handled
 - Image dimensions are not validated yet
 - This project does not have any tests implemented because it started as an empty project and was developed without any classes, functions or structure. It also had some time limitations. For further development it is strongly recommended to add tests
-- Some issues and app crashes occur on device rotation. It was developed on portrait mode and not validated yet for different orientations.
+- Some issues and app crashes occur on device rotation. It was developed on portrait mode and not validated yet for different orientations
+- The project is using a single view-model for all fragments. If the project grows it should definetily not do that and use multiple fragments
 
 ## License
 This project may be subject of third-party licenses.

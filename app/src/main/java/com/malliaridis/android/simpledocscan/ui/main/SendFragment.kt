@@ -1,4 +1,4 @@
-package com.example.simpledocscan.ui.main
+package com.malliaridis.android.simpledocscan.ui.main
 
 import android.content.Intent
 import android.graphics.BitmapFactory
@@ -12,9 +12,9 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.example.simpledocscan.R
-import com.example.simpledocscan.databinding.SendFragmentBinding
-import com.example.simpledocscan.utils.generateEmailIntent
+import com.malliaridis.android.simpledocscan.R
+import com.malliaridis.android.simpledocscan.databinding.SendFragmentBinding
+import com.malliaridis.android.simpledocscan.utils.generateEmailIntent
 import java.util.*
 
 /**

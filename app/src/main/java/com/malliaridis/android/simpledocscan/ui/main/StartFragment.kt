@@ -1,4 +1,4 @@
-package com.example.simpledocscan.ui.main
+package com.malliaridis.android.simpledocscan.ui.main
 
 import android.os.Bundle
 import android.util.Patterns
@@ -10,8 +10,8 @@ import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.example.simpledocscan.R
-import com.example.simpledocscan.databinding.StartFragmentBinding
+import com.malliaridis.android.simpledocscan.R
+import com.malliaridis.android.simpledocscan.databinding.StartFragmentBinding
 
 /**
  * This fragment represents the first step of the app, providing an email address for sending the

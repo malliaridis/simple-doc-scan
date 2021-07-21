@@ -1,4 +1,4 @@
-package com.example.simpledocscan.utils
+package com.malliaridis.android.simpledocscan.utils
 
 import android.graphics.Bitmap
 import android.graphics.Bitmap.CompressFormat

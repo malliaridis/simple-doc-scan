@@ -1,4 +1,4 @@
-package com.example.simpledocscan.ui.main
+package com.malliaridis.android.simpledocscan.ui.main
 
 import android.Manifest
 import android.app.AlertDialog
@@ -17,14 +17,14 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.example.simpledocscan.BuildConfig
-import com.example.simpledocscan.R
-import com.example.simpledocscan.databinding.DocScanFragmentBinding
-import com.example.simpledocscan.utils.compressBitmap
 import com.geniusscansdk.camera.CameraManager
 import com.geniusscansdk.camera.ScanFragment
 import com.geniusscansdk.camera.realtime.BorderDetector.BorderDetectorListener
 import com.geniusscansdk.core.*
+import com.malliaridis.android.simpledocscan.BuildConfig
+import com.malliaridis.android.simpledocscan.R
+import com.malliaridis.android.simpledocscan.databinding.DocScanFragmentBinding
+import com.malliaridis.android.simpledocscan.utils.compressBitmap
 import java.io.File
 import java.util.*
 
